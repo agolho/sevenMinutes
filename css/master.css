@@ -1,0 +1,15 @@
+body {
+  margin: 0 auto;
+  padding: 2em;
+    height:100vh;
+}
+
+.splash {
+  height: 100%;
+}
+.info {
+  height: 100%;
+}
+.digitiser {
+  font-size: 10em;
+}

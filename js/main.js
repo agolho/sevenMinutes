@@ -1,8 +1,9 @@
-var whatNow,timer,exerciseIndex=0;
+var whatNow,timer,exerciseIndex;
 var excersises=['Jumping Jacks','Wall Sit','Push-Up','Crunch','Step-Up','Squat','Triceps Dip','Plank','High Knees','Lunge','Push Up with Rotation','Side Plank'];
 
 $("#startButton").click(function() {
   $('#startButton').addClass('disabled');
+  exerciseIndex=0;
   sevenMinutes();
 })
 
@@ -26,10 +27,15 @@ function writeClock(whatNow,workLength){
   }
   else {
     timer=35;
-    if (exerciseIndex < excersises.length)
-        exerciseIndex++;
-      }
+  if (exerciseIndex < excersises.length)
+      exerciseIndex++;
+    } if (exerciseIndex==excersises.length) {
+      clearInterval(timer);
+      timer=0;
+      countdown=0;
+      $("#splashScreen").html('<h1>Congratulations!</h1> <br> <button class="btn btn-lg btn-warning" id="startButton" name="button">AGAIN!</button>');
     }
+  }
 }
 
 //GlOBAL CONTROLS

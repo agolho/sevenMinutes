@@ -1,5 +1,5 @@
 var whatNow,timer,seconds,exerciseIndex;
-var excersises=['Jumping Jacks','Wall Sit','Push-Up','Crunch','Step-Up','Squat','Triceps Dip','Plank','High Knees','Lunge','Push Up with Rotation','Side Plank'];
+var exercises=['Jumping Jacks','Wall Sit','Push-Up','Crunch','Step-Up','Squat','Triceps Dip','Plank','High Knees','Lunge','Push Up with Rotation','Side Plank'];
 
 $("#startButton").click(function() {
   $('#startButton').addClass('disabled');
@@ -8,7 +8,7 @@ $("#startButton").click(function() {
 })
 
 function sevenMinutes(){
-    timer = setInterval(function(){ writeClock(excersises[exerciseIndex],30); }, 1000);
+    timer = setInterval(function(){ writeClock(exercises[exerciseIndex],30); }, 1000);
     seconds=35;
 }
 
@@ -27,9 +27,9 @@ function writeClock(whatNow,workLength){
   }
   else {
     seconds=35;
-  if (exerciseIndex < excersises.length)
+  if (exerciseIndex < exercises.length)
       exerciseIndex++;
-    } if (exerciseIndex==excersises.length) {
+    } if (exerciseIndex==exercises.length) {
       clearInterval(timer);
       seconds=0;
       countdown=0;

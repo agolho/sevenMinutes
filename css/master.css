@@ -13,3 +13,10 @@ body {
 .digitiser {
   font-size: 10em;
 }
+
+.imageAid {
+
+  min-height: 30em;
+  background-size: small;
+  background-repeat: no-repeat;
+}
